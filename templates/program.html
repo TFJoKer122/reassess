@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFoolComp.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/main.js') }}" async></script>
+</head>
+<body>
+<header>
+    <a href="{{ url_for('program') }}" class="logo">TheFoolComp<span>.</span></a>
+    <nav class="navbar">
+        <a href="{{ url_for('program') }}">home</a>
+        <a href="{{ url_for('mouse') }}">Mouse</a>
+        <a href="{{ url_for('keyboard') }}">Keyboard</a>
+        <a href="{{ url_for('headset') }}">Headset</a>
+        <a href="{{ url_for('contaxt') }}">Help</a>
+    </nav>
+    <div class="icons">
+       <a href="#" class="fas fa-shopping-cart"></a>
+       <a href="{{ url_for('login') }}" class="fas fa-user"></a>
+
+    </div>
+</header>    
+<section class="home" id="home">
+    <div class="content">
+        <h3>Wecome to TheFoolComp.</h3>
+        <span>Here we sale the popular esports mouse ,keyboard and 
+            Headset/earphone 
+        </span>
+        <p>Hope u can find the things you need.</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+</section>
+<section class="products" id="products">
+    <h1 class="heading">Products <span>Type</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/mouse_cov.png') }}" alt="">
+                <div>
+                 <a href="{{ url_for('mouse') }}" class="cart-btn">Go to mouse</a>
+                </div>
+               
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/keyboard_cov.png') }}" alt="">
+                <div>
+                 <a href="{{ url_for('keyboard') }}" class="cart-btn">go to keyboard</a>
+                </div>
+                
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/headset_cov.png') }}" alt="">
+                <div>
+                 <a href="{{ url_for('headset') }}" class="cart-btn">Go to headset</a>
+                </div>
+                
+        </div>
+    </div> 
+
+
+
+</section>
+<button onclick="topFunction()" id="mybtn" title="Go to top">Top</button>
+<script>
+let mybutton = document.getElementById("mybtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
